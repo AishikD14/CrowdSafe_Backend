@@ -179,7 +179,7 @@ def crowd_detection():
         os.remove(filename)
     except Exception as e:
         os.remove(filename)
-        response = ({'Error': 'Error'}, http.HTTPStatus.CONFLICT)
+        response = ({'Error': 'Error {}'.format(str(e))}, http.HTTPStatus.CONFLICT)
     return response
 
 
