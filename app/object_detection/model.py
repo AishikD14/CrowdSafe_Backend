@@ -9,9 +9,9 @@ import numpy as np
 import tensorflow as tf
 from PIL import Image
 from IPython.display import display
-from app.object_detection.models.research.object_detection.utils import ops as utils_ops
-from app.object_detection.models.research.object_detection.utils import label_map_util
-from app.object_detection.models.research.object_detection.utils import visualization_utils as vis_util
+from object_detection.utils import ops as utils_ops
+from object_detection.utils import label_map_util
+from object_detection.utils import visualization_utils as vis_util
 
 # patch tf1 into `utils.ops`
 utils_ops.tf = tf.compat.v1
