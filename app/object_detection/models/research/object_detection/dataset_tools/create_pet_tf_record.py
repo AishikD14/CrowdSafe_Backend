@@ -13,7 +13,7 @@
 # limitations under the License.
 # ==============================================================================
 
-r"""Convert the Oxford pet dataset to TFRecord for object_detection.
+r"""Convert the Oxford pet dataset to TFRecord for  app.object_detection.models.research.object_detection
 
 See: O. M. Parkhi, A. Vedaldi, A. Zisserman, C. V. Jawahar
      Cats and Dogs
@@ -21,7 +21,7 @@ See: O. M. Parkhi, A. Vedaldi, A. Zisserman, C. V. Jawahar
      http://www.robots.ox.ac.uk/~vgg/data/pets/
 
 Example usage:
-    python object_detection/dataset_tools/create_pet_tf_record.py \
+    python app.object_detection.models.research.object_detection/dataset_tools/create_pet_tf_record.py \
         --data_dir=/home/user/pet \
         --output_dir=/home/user/pet/output
 """
@@ -39,9 +39,9 @@ import numpy as np
 import PIL.Image
 import tensorflow as tf
 
-from object_detection.dataset_tools import tf_record_creation_util
-from object_detection.utils import dataset_util
-from object_detection.utils import label_map_util
+from  app.object_detection.models.research.object_detectiondataset_tools import tf_record_creation_util
+from  app.object_detection.models.research.object_detectionutils import dataset_util
+from  app.object_detection.models.research.object_detectionutils import label_map_util
 
 flags = tf.app.flags
 flags.DEFINE_string('data_dir', '', 'Root directory to raw pet dataset.')

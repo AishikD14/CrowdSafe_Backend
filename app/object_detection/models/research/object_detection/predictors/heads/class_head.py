@@ -23,7 +23,7 @@ import functools
 import tensorflow as tf
 from tensorflow.contrib import slim as contrib_slim
 
-from object_detection.predictors.heads import head
+from  app.object_detection.models.research.object_detectionpredictors.heads import head
 
 slim = contrib_slim
 

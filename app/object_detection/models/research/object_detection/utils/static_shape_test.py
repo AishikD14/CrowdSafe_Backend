@@ -13,7 +13,7 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for object_detection.utils.static_shape."""
+"""Tests for  app.object_detection.models.research.object_detectionutils.static_shape."""
 
 from __future__ import absolute_import
 from __future__ import division
@@ -21,7 +21,7 @@ from __future__ import print_function
 
 import tensorflow as tf
 
-from object_detection.utils import static_shape
+from  app.object_detection.models.research.object_detectionutils import static_shape
 
 
 class StaticShapeTest(tf.test.TestCase):

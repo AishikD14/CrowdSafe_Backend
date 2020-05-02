@@ -20,9 +20,9 @@ described in:
 T.-Y. Lin, P. Goyal, R. Girshick, K. He, P. Dollar
 """
 
-from object_detection.anchor_generators import grid_anchor_generator
-from object_detection.core import anchor_generator
-from object_detection.core import box_list_ops
+from  app.object_detection.models.research.object_detectionanchor_generators import grid_anchor_generator
+from  app.object_detection.models.research.object_detectioncore import anchor_generator
+from  app.object_detection.models.research.object_detectioncore import box_list_ops
 
 
 class MultiscaleGridAnchorGenerator(anchor_generator.AnchorGenerator):

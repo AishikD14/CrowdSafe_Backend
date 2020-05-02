@@ -39,17 +39,17 @@ from six.moves import range
 from six.moves import zip
 import tensorflow as tf
 
-from object_detection.box_coders import faster_rcnn_box_coder
-from object_detection.box_coders import mean_stddev_box_coder
-from object_detection.core import box_coder
-from object_detection.core import box_list
-from object_detection.core import box_list_ops
-from object_detection.core import matcher as mat
-from object_detection.core import region_similarity_calculator as sim_calc
-from object_detection.core import standard_fields as fields
-from object_detection.matchers import argmax_matcher
-from object_detection.matchers import bipartite_matcher
-from object_detection.utils import shape_utils
+from  app.object_detection.models.research.object_detectionbox_coders import faster_rcnn_box_coder
+from  app.object_detection.models.research.object_detectionbox_coders import mean_stddev_box_coder
+from  app.object_detection.models.research.object_detectioncore import box_coder
+from  app.object_detection.models.research.object_detectioncore import box_list
+from  app.object_detection.models.research.object_detectioncore import box_list_ops
+from  app.object_detection.models.research.object_detectioncore import matcher as mat
+from  app.object_detection.models.research.object_detectioncore import region_similarity_calculator as sim_calc
+from  app.object_detection.models.research.object_detectioncore import standard_fields as fields
+from  app.object_detection.models.research.object_detectionmatchers import argmax_matcher
+from  app.object_detection.models.research.object_detectionmatchers import bipartite_matcher
+from  app.object_detection.models.research.object_detectionutils import shape_utils
 
 
 class TargetAssigner(object):
@@ -64,9 +64,9 @@ class TargetAssigner(object):
 
     Args:
       similarity_calc: a RegionSimilarityCalculator
-      matcher: an object_detection.core.Matcher used to match groundtruth to
+      matcher: an  app.object_detection.models.research.object_detectioncore.Matcher used to match groundtruth to
         anchors.
-      box_coder_instance: an object_detection.core.BoxCoder used to encode
+      box_coder_instance: an  app.object_detection.models.research.object_detectioncore.BoxCoder used to encode
         matching groundtruth boxes with respect to anchors.
       negative_class_weight: classification weight to be associated to negative
         anchors (default: 1.0). The weight must be in [0., 1.].

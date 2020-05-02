@@ -96,7 +96,7 @@ the [tensorflow/models/research/](https://github.com/tensorflow/models/tree/mast
 
 ``` bash
 # From tensorflow/models/research/
-protoc object_detection/protos/*.proto --python_out=.
+protoc app.object_detection.models.research.object_detection/protos/*.proto --python_out=.
 ```
 
 **Note**: If you're getting errors while compiling, you might be using an incompatible protobuf compiler. If that's the case, use the following manual installation
@@ -117,7 +117,7 @@ Run the compilation process again, but use the downloaded version of protoc
 
 ```bash
 # From tensorflow/models/research/
-./bin/protoc object_detection/protos/*.proto --python_out=.
+./bin/protoc app.object_detection.models.research.object_detection/protos/*.proto --python_out=.
 ```
 
 **If you are on MacOS:**
@@ -136,7 +136,7 @@ Run the compilation process again:
 
 ``` bash
 # From tensorflow/models/research/
-protoc object_detection/protos/*.proto --python_out=.
+protoc app.object_detection.models.research.object_detection/protos/*.proto --python_out=.
 ```
 
 ## Add Libraries to PYTHONPATH
@@ -166,5 +166,5 @@ You can test that you have correctly installed the Tensorflow Object Detection\
 API by running the following command:
 
 ```bash
-python object_detection/builders/model_builder_test.py
+python app.object_detection.models.research.object_detection/builders/model_builder_test.py
 ```

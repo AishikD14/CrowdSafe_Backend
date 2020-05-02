@@ -13,13 +13,13 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for object_detection.matchers.argmax_matcher."""
+"""Tests for  app.object_detection.models.research.object_detectionmatchers.argmax_matcher."""
 
 import numpy as np
 import tensorflow as tf
 
-from object_detection.matchers import argmax_matcher
-from object_detection.utils import test_case
+from  app.object_detection.models.research.object_detectionmatchers import argmax_matcher
+from  app.object_detection.models.research.object_detectionutils import test_case
 
 
 class ArgMaxMatcherTest(test_case.TestCase):

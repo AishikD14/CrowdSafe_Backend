@@ -15,7 +15,7 @@
 r"""Creates TFRecords of Open Images dataset for object detection.
 
 Example usage:
-  python object_detection/dataset_tools/create_oid_tf_record.py \
+  python app.object_detection.models.research.object_detection/dataset_tools/create_oid_tf_record.py \
     --input_box_annotations_csv=/path/to/input/annotations-human-bbox.csv \
     --input_image_label_annotations_csv=/path/to/input/annotations-label.csv \
     --input_images_directory=/path/to/input/image_pixels_directory \
@@ -42,9 +42,9 @@ import contextlib2
 import pandas as pd
 import tensorflow as tf
 
-from object_detection.dataset_tools import oid_tfrecord_creation
-from object_detection.dataset_tools import tf_record_creation_util
-from object_detection.utils import label_map_util
+from  app.object_detection.models.research.object_detectiondataset_tools import oid_tfrecord_creation
+from  app.object_detection.models.research.object_detectiondataset_tools import tf_record_creation_util
+from  app.object_detection.models.research.object_detectionutils import label_map_util
 
 tf.flags.DEFINE_string('input_box_annotations_csv', None,
                        'Path to CSV containing image bounding box annotations')

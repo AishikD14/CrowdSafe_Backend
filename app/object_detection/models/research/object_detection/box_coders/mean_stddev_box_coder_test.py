@@ -13,12 +13,12 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for object_detection.box_coder.mean_stddev_boxcoder."""
+"""Tests for  app.object_detection.models.research.object_detectionbox_coder.mean_stddev_boxcoder."""
 
 import tensorflow as tf
 
-from object_detection.box_coders import mean_stddev_box_coder
-from object_detection.core import box_list
+from  app.object_detection.models.research.object_detectionbox_coders import mean_stddev_box_coder
+from  app.object_detection.models.research.object_detectioncore import box_list
 
 
 class MeanStddevBoxCoderTest(tf.test.TestCase):

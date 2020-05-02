@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-"""Tests for object_detection.utils.per_image_vrd_evaluation."""
+"""Tests for  app.object_detection.models.research.object_detectionutils.per_image_vrd_evaluation."""
 
 from __future__ import absolute_import
 from __future__ import division
@@ -21,7 +21,7 @@ from __future__ import print_function
 import numpy as np
 import tensorflow as tf
 
-from object_detection.utils import per_image_vrd_evaluation
+from  app.object_detection.models.research.object_detectionutils import per_image_vrd_evaluation
 
 
 class SingleClassPerImageVrdEvaluationTest(tf.test.TestCase):

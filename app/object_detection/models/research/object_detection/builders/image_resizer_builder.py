@@ -16,8 +16,8 @@
 import functools
 import tensorflow as tf
 
-from object_detection.core import preprocessor
-from object_detection.protos import image_resizer_pb2
+from  app.object_detection.models.research.object_detectioncore import preprocessor
+from  app.object_detection.models.research.object_detectionprotos import image_resizer_pb2
 
 
 def _tf_resize_method(resize_method):

@@ -47,12 +47,12 @@ import os
 import tensorflow as tf
 from tensorflow.contrib import framework as contrib_framework
 
-from object_detection.builders import dataset_builder
-from object_detection.builders import graph_rewriter_builder
-from object_detection.builders import model_builder
-from object_detection.legacy import evaluator
-from object_detection.utils import config_util
-from object_detection.utils import label_map_util
+from  app.object_detection.models.research.object_detectionbuilders import dataset_builder
+from  app.object_detection.models.research.object_detectionbuilders import graph_rewriter_builder
+from  app.object_detection.models.research.object_detectionbuilders import model_builder
+from  app.object_detection.models.research.object_detectionlegacy import evaluator
+from  app.object_detection.models.research.object_detectionutils import config_util
+from  app.object_detection.models.research.object_detectionutils import label_map_util
 
 tf.logging.set_verbosity(tf.logging.INFO)
 
@@ -81,7 +81,7 @@ flags.DEFINE_boolean(
 FLAGS = flags.FLAGS
 
 
-@contrib_framework.deprecated(None, 'Use object_detection/model_main.py.')
+@contrib_framework.deprecated(None, 'Use app.object_detection.models.research.object_detection/model_main.py.')
 def main(unused_argv):
   assert FLAGS.checkpoint_dir, '`checkpoint_dir` is missing.'
   assert FLAGS.eval_dir, '`eval_dir` is missing.'

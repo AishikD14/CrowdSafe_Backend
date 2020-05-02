@@ -16,7 +16,7 @@
 """Mask R-CNN Box Predictor."""
 import tensorflow as tf
 
-from object_detection.core import box_predictor
+from  app.object_detection.models.research.object_detectioncore import box_predictor
 
 slim = tf.contrib.slim
 

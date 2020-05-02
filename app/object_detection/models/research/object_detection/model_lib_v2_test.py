@@ -22,9 +22,9 @@ import os
 
 import tensorflow as tf
 
-from object_detection import model_hparams
-from object_detection import model_lib_v2
-from object_detection.utils import config_util
+from app.object_detection.models.research.object_detection import model_hparams
+from app.object_detection.models.research.object_detection import model_lib_v2
+from  app.object_detection.models.research.object_detectionutils import config_util
 
 
 # Model for test. Current options are:

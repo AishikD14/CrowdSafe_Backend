@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-"""Tests for object_detection.metrics."""
+"""Tests for  app.object_detection.models.research.object_detectionmetrics."""
 
 from __future__ import absolute_import
 from __future__ import division
@@ -21,7 +21,7 @@ from __future__ import print_function
 import numpy as np
 import tensorflow as tf
 
-from object_detection.utils import metrics
+from  app.object_detection.models.research.object_detectionutils import metrics
 
 
 class MetricsTest(tf.test.TestCase):

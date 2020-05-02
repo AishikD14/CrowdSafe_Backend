@@ -77,14 +77,14 @@ from six.moves import zip
 import tensorflow as tf
 
 from tensorflow.python.ops import control_flow_ops
-from object_detection.core import box_list
-from object_detection.core import box_list_ops
-from object_detection.core import keypoint_ops
-from object_detection.core import preprocessor_cache
-from object_detection.core import standard_fields as fields
-from object_detection.utils import autoaugment_utils
-from object_detection.utils import patch_ops
-from object_detection.utils import shape_utils
+from  app.object_detection.models.research.object_detectioncore import box_list
+from  app.object_detection.models.research.object_detectioncore import box_list_ops
+from  app.object_detection.models.research.object_detectioncore import keypoint_ops
+from  app.object_detection.models.research.object_detectioncore import preprocessor_cache
+from  app.object_detection.models.research.object_detectioncore import standard_fields as fields
+from  app.object_detection.models.research.object_detectionutils import autoaugment_utils
+from  app.object_detection.models.research.object_detectionutils import patch_ops
+from  app.object_detection.models.research.object_detectionutils import shape_utils
 
 
 def _apply_with_random_selector(x,

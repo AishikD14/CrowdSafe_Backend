@@ -14,10 +14,10 @@
 # ==============================================================================
 
 """A function to build an object detection box coder from configuration."""
-from object_detection.builders import box_coder_builder
-from object_detection.builders import matcher_builder
-from object_detection.builders import region_similarity_calculator_builder
-from object_detection.core import target_assigner
+from  app.object_detection.models.research.object_detectionbuilders import box_coder_builder
+from  app.object_detection.models.research.object_detectionbuilders import matcher_builder
+from  app.object_detection.models.research.object_detectionbuilders import region_similarity_calculator_builder
+from  app.object_detection.models.research.object_detectioncore import target_assigner
 
 
 def build(target_assigner_config):

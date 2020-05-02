@@ -21,7 +21,7 @@ All the box prediction heads have a _predict function that receives the
 """
 import tensorflow as tf
 
-from object_detection.predictors.heads import head
+from  app.object_detection.models.research.object_detectionpredictors.heads import head
 
 
 class ConvolutionalBoxHead(head.KerasHead):

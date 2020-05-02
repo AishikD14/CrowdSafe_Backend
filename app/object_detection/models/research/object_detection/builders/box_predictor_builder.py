@@ -17,19 +17,19 @@
 
 import collections
 import tensorflow as tf
-from object_detection.predictors import convolutional_box_predictor
-from object_detection.predictors import convolutional_keras_box_predictor
-from object_detection.predictors import mask_rcnn_box_predictor
-from object_detection.predictors import mask_rcnn_keras_box_predictor
-from object_detection.predictors import rfcn_box_predictor
-from object_detection.predictors import rfcn_keras_box_predictor
-from object_detection.predictors.heads import box_head
-from object_detection.predictors.heads import class_head
-from object_detection.predictors.heads import keras_box_head
-from object_detection.predictors.heads import keras_class_head
-from object_detection.predictors.heads import keras_mask_head
-from object_detection.predictors.heads import mask_head
-from object_detection.protos import box_predictor_pb2
+from  app.object_detection.models.research.object_detectionpredictors import convolutional_box_predictor
+from  app.object_detection.models.research.object_detectionpredictors import convolutional_keras_box_predictor
+from  app.object_detection.models.research.object_detectionpredictors import mask_rcnn_box_predictor
+from  app.object_detection.models.research.object_detectionpredictors import mask_rcnn_keras_box_predictor
+from  app.object_detection.models.research.object_detectionpredictors import rfcn_box_predictor
+from  app.object_detection.models.research.object_detectionpredictors import rfcn_keras_box_predictor
+from  app.object_detection.models.research.object_detectionpredictors.heads import box_head
+from  app.object_detection.models.research.object_detectionpredictors.heads import class_head
+from  app.object_detection.models.research.object_detectionpredictors.heads import keras_box_head
+from  app.object_detection.models.research.object_detectionpredictors.heads import keras_class_head
+from  app.object_detection.models.research.object_detectionpredictors.heads import keras_mask_head
+from  app.object_detection.models.research.object_detectionpredictors.heads import mask_head
+from  app.object_detection.models.research.object_detectionprotos import box_predictor_pb2
 
 
 def build_convolutional_box_predictor(is_training,

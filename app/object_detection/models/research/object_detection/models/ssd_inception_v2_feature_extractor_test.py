@@ -13,12 +13,12 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for object_detection.models.ssd_inception_v2_feature_extractor."""
+"""Tests for  app.object_detection.models.research.object_detectionmodels.ssd_inception_v2_feature_extractor."""
 import numpy as np
 import tensorflow as tf
 
-from object_detection.models import ssd_feature_extractor_test
-from object_detection.models import ssd_inception_v2_feature_extractor
+from  app.object_detection.models.research.object_detectionmodels import ssd_feature_extractor_test
+from  app.object_detection.models.research.object_detectionmodels import ssd_inception_v2_feature_extractor
 
 
 class SsdInceptionV2FeatureExtractorTest(

@@ -13,18 +13,18 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for object_detection.trainer."""
+"""Tests for  app.object_detection.models.research.object_detectiontrainer."""
 
 import tensorflow as tf
 
 from google.protobuf import text_format
 from tensorflow.contrib import layers as contrib_layers
 
-from object_detection.core import losses
-from object_detection.core import model
-from object_detection.core import standard_fields as fields
-from object_detection.legacy import trainer
-from object_detection.protos import train_pb2
+from  app.object_detection.models.research.object_detectioncore import losses
+from  app.object_detection.models.research.object_detectioncore import model
+from  app.object_detection.models.research.object_detectioncore import standard_fields as fields
+from  app.object_detection.models.research.object_detectionlegacy import trainer
+from  app.object_detection.models.research.object_detectionprotos import train_pb2
 
 
 NUMBER_OF_CLASSES = 2

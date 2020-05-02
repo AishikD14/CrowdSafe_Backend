@@ -13,16 +13,16 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for object_detection.predictors.mask_rcnn_box_predictor."""
+"""Tests for  app.object_detection.models.research.object_detectionpredictors.mask_rcnn_box_predictor."""
 import numpy as np
 import tensorflow as tf
 
 from google.protobuf import text_format
-from object_detection.builders import box_predictor_builder
-from object_detection.builders import hyperparams_builder
-from object_detection.predictors import mask_rcnn_keras_box_predictor as box_predictor
-from object_detection.protos import hyperparams_pb2
-from object_detection.utils import test_case
+from  app.object_detection.models.research.object_detectionbuilders import box_predictor_builder
+from  app.object_detection.models.research.object_detectionbuilders import hyperparams_builder
+from  app.object_detection.models.research.object_detectionpredictors import mask_rcnn_keras_box_predictor as box_predictor
+from  app.object_detection.models.research.object_detectionprotos import hyperparams_pb2
+from  app.object_detection.models.research.object_detectionutils import test_case
 
 
 class MaskRCNNKerasBoxPredictorTest(test_case.TestCase):

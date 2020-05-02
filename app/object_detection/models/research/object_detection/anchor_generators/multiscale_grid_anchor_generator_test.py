@@ -17,8 +17,8 @@
 import numpy as np
 import tensorflow as tf
 
-from object_detection.anchor_generators import multiscale_grid_anchor_generator as mg
-from object_detection.utils import test_case
+from  app.object_detection.models.research.object_detectionanchor_generators import multiscale_grid_anchor_generator as mg
+from  app.object_detection.models.research.object_detectionutils import test_case
 
 
 class MultiscaleGridAnchorGeneratorTest(test_case.TestCase):

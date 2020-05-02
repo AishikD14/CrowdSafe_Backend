@@ -11,7 +11,7 @@ from flask_basicauth import BasicAuth
 
 from app.models.covid_19_india_scraper import WebScraper
 from app.models.db_handler import DBHandler
-from app.object_detection.model import ObjectDetection
+from app. app.object_detection.models.research.object_detectionmodel import ObjectDetection
 
 app = Flask(__name__)
 CORS(app)

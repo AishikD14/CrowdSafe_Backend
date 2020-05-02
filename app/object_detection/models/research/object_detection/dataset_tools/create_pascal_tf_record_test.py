@@ -21,7 +21,7 @@ import numpy as np
 import PIL.Image
 import tensorflow as tf
 
-from object_detection.dataset_tools import create_pascal_tf_record
+from  app.object_detection.models.research.object_detectiondataset_tools import create_pascal_tf_record
 
 
 class CreatePascalTFRecordTest(tf.test.TestCase):

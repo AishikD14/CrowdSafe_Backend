@@ -17,10 +17,10 @@
 import tensorflow as tf
 from tensorflow.contrib import slim as contrib_slim
 
-from object_detection.meta_architectures import ssd_meta_arch
-from object_detection.models import feature_map_generators
-from object_detection.utils import ops
-from object_detection.utils import shape_utils
+from  app.object_detection.models.research.object_detectionmeta_architectures import ssd_meta_arch
+from  app.object_detection.models.research.object_detectionmodels import feature_map_generators
+from  app.object_detection.models.research.object_detectionutils import ops
+from  app.object_detection.models.research.object_detectionutils import shape_utils
 from nets import inception_v3
 
 slim = contrib_slim

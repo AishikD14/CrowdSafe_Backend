@@ -21,24 +21,24 @@ from __future__ import print_function
 import functools
 
 import tensorflow as tf
-from object_detection.builders import dataset_builder
-from object_detection.builders import image_resizer_builder
-from object_detection.builders import model_builder
-from object_detection.builders import preprocessor_builder
-from object_detection.core import box_list
-from object_detection.core import box_list_ops
-from object_detection.core import keypoint_ops
-from object_detection.core import preprocessor
-from object_detection.core import standard_fields as fields
-from object_detection.data_decoders import tf_example_decoder
-from object_detection.protos import eval_pb2
-from object_detection.protos import image_resizer_pb2
-from object_detection.protos import input_reader_pb2
-from object_detection.protos import model_pb2
-from object_detection.protos import train_pb2
-from object_detection.utils import config_util
-from object_detection.utils import ops as util_ops
-from object_detection.utils import shape_utils
+from  app.object_detection.models.research.object_detectionbuilders import dataset_builder
+from  app.object_detection.models.research.object_detectionbuilders import image_resizer_builder
+from  app.object_detection.models.research.object_detectionbuilders import model_builder
+from  app.object_detection.models.research.object_detectionbuilders import preprocessor_builder
+from  app.object_detection.models.research.object_detectioncore import box_list
+from  app.object_detection.models.research.object_detectioncore import box_list_ops
+from  app.object_detection.models.research.object_detectioncore import keypoint_ops
+from  app.object_detection.models.research.object_detectioncore import preprocessor
+from  app.object_detection.models.research.object_detectioncore import standard_fields as fields
+from  app.object_detection.models.research.object_detectiondata_decoders import tf_example_decoder
+from  app.object_detection.models.research.object_detectionprotos import eval_pb2
+from  app.object_detection.models.research.object_detectionprotos import image_resizer_pb2
+from  app.object_detection.models.research.object_detectionprotos import input_reader_pb2
+from  app.object_detection.models.research.object_detectionprotos import model_pb2
+from  app.object_detection.models.research.object_detectionprotos import train_pb2
+from  app.object_detection.models.research.object_detectionutils import config_util
+from  app.object_detection.models.research.object_detectionutils import ops as util_ops
+from  app.object_detection.models.research.object_detectionutils import shape_utils
 
 HASH_KEY = 'hash'
 HASH_BINS = 1 << 31

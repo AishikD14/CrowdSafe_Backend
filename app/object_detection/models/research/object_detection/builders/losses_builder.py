@@ -16,10 +16,10 @@
 """A function to build localization and classification losses from config."""
 
 import functools
-from object_detection.core import balanced_positive_negative_sampler as sampler
-from object_detection.core import losses
-from object_detection.protos import losses_pb2
-from object_detection.utils import ops
+from  app.object_detection.models.research.object_detectioncore import balanced_positive_negative_sampler as sampler
+from  app.object_detection.models.research.object_detectioncore import losses
+from  app.object_detection.models.research.object_detectionprotos import losses_pb2
+from  app.object_detection.models.research.object_detectionutils import ops
 
 
 def build(loss_config):

@@ -22,16 +22,16 @@ import tensorflow as tf
 from tensorflow.contrib import slim as contrib_slim
 from tensorflow.contrib import tpu as contrib_tpu
 
-from object_detection.core import box_list
-from object_detection.core import box_list_ops
-from object_detection.core import matcher
-from object_detection.core import model
-from object_detection.core import standard_fields as fields
-from object_detection.core import target_assigner
-from object_detection.utils import ops
-from object_detection.utils import shape_utils
-from object_detection.utils import variables_helper
-from object_detection.utils import visualization_utils
+from  app.object_detection.models.research.object_detectioncore import box_list
+from  app.object_detection.models.research.object_detectioncore import box_list_ops
+from  app.object_detection.models.research.object_detectioncore import matcher
+from  app.object_detection.models.research.object_detectioncore import model
+from  app.object_detection.models.research.object_detectioncore import standard_fields as fields
+from  app.object_detection.models.research.object_detectioncore import target_assigner
+from  app.object_detection.models.research.object_detectionutils import ops
+from  app.object_detection.models.research.object_detectionutils import shape_utils
+from  app.object_detection.models.research.object_detectionutils import variables_helper
+from  app.object_detection.models.research.object_detectionutils import visualization_utils
 
 slim = contrib_slim
 
@@ -340,8 +340,8 @@ class SSDMetaArch(model.DetectionModel):
       score_conversion_fn: callable elementwise nonlinearity (that takes tensors
         as inputs and returns tensors).  This is usually used to convert logits
         to probabilities.
-      classification_loss: an object_detection.core.losses.Loss object.
-      localization_loss: a object_detection.core.losses.Loss object.
+      classification_loss: an  app.object_detection.models.research.object_detectioncore.losses.Loss object.
+      localization_loss: a  app.object_detection.models.research.object_detectioncore.losses.Loss object.
       classification_loss_weight: float
       localization_loss_weight: float
       normalize_loss_by_num_matches: boolean

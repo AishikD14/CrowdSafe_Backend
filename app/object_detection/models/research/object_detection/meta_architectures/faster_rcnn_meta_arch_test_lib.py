@@ -13,7 +13,7 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for object_detection.meta_architectures.faster_rcnn_meta_arch."""
+"""Tests for  app.object_detection.models.research.object_detectionmeta_architectures.faster_rcnn_meta_arch."""
 import functools
 from absl.testing import parameterized
 
@@ -22,21 +22,21 @@ import tensorflow as tf
 
 from google.protobuf import text_format
 from tensorflow.contrib import slim as contrib_slim
-from object_detection.anchor_generators import grid_anchor_generator
-from object_detection.builders import box_predictor_builder
-from object_detection.builders import hyperparams_builder
-from object_detection.builders import post_processing_builder
-from object_detection.core import balanced_positive_negative_sampler as sampler
-from object_detection.core import losses
-from object_detection.core import post_processing
-from object_detection.core import target_assigner
-from object_detection.meta_architectures import faster_rcnn_meta_arch
-from object_detection.protos import box_predictor_pb2
-from object_detection.protos import hyperparams_pb2
-from object_detection.protos import post_processing_pb2
-from object_detection.utils import ops
-from object_detection.utils import test_case
-from object_detection.utils import test_utils
+from  app.object_detection.models.research.object_detectionanchor_generators import grid_anchor_generator
+from  app.object_detection.models.research.object_detectionbuilders import box_predictor_builder
+from  app.object_detection.models.research.object_detectionbuilders import hyperparams_builder
+from  app.object_detection.models.research.object_detectionbuilders import post_processing_builder
+from  app.object_detection.models.research.object_detectioncore import balanced_positive_negative_sampler as sampler
+from  app.object_detection.models.research.object_detectioncore import losses
+from  app.object_detection.models.research.object_detectioncore import post_processing
+from  app.object_detection.models.research.object_detectioncore import target_assigner
+from  app.object_detection.models.research.object_detectionmeta_architectures import faster_rcnn_meta_arch
+from  app.object_detection.models.research.object_detectionprotos import box_predictor_pb2
+from  app.object_detection.models.research.object_detectionprotos import hyperparams_pb2
+from  app.object_detection.models.research.object_detectionprotos import post_processing_pb2
+from  app.object_detection.models.research.object_detectionutils import ops
+from  app.object_detection.models.research.object_detectionutils import test_case
+from  app.object_detection.models.research.object_detectionutils import test_utils
 
 slim = contrib_slim
 BOX_CODE_SIZE = 4

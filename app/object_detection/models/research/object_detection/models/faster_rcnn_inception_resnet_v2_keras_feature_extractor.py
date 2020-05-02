@@ -27,10 +27,10 @@ Huang et al. (https://arxiv.org/abs/1611.10012)
 
 import tensorflow as tf
 
-from object_detection.meta_architectures import faster_rcnn_meta_arch
-from object_detection.models.keras_models import inception_resnet_v2
-from object_detection.utils import model_util
-from object_detection.utils import variables_helper
+from  app.object_detection.models.research.object_detectionmeta_architectures import faster_rcnn_meta_arch
+from  app.object_detection.models.research.object_detectionmodels.keras_models import inception_resnet_v2
+from  app.object_detection.models.research.object_detectionutils import model_util
+from  app.object_detection.models.research.object_detectionutils import variables_helper
 
 
 class FasterRCNNInceptionResnetV2KerasFeatureExtractor(

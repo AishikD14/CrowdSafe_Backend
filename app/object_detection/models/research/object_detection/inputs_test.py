@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-"""Tests for object_detection.tflearn.inputs."""
+"""Tests for  app.object_detection.models.research.object_detectiontflearn.inputs."""
 
 from __future__ import absolute_import
 from __future__ import division
@@ -25,11 +25,11 @@ from absl.testing import parameterized
 import numpy as np
 import tensorflow as tf
 
-from object_detection import inputs
-from object_detection.core import preprocessor
-from object_detection.core import standard_fields as fields
-from object_detection.utils import config_util
-from object_detection.utils import test_case
+from app.object_detection.models.research.object_detection import inputs
+from  app.object_detection.models.research.object_detectioncore import preprocessor
+from  app.object_detection.models.research.object_detectioncore import standard_fields as fields
+from  app.object_detection.models.research.object_detectionutils import config_util
+from  app.object_detection.models.research.object_detectionutils import test_case
 
 FLAGS = tf.flags.FLAGS
 

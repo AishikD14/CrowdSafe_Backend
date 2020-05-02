@@ -32,9 +32,9 @@ if int(major) < 1 or (int(major == 1) and int(minor) < 14):
 from tensorflow.python.framework import function
 from tensorflow.python.tpu import functional as tpu_functional
 from tensorflow.python.tpu.ops import tpu_ops
-from object_detection import exporter
-from object_detection.builders import model_builder
-from object_detection.tpu_exporters import utils
+from app.object_detection.models.research.object_detection import exporter
+from  app.object_detection.models.research.object_detectionbuilders import model_builder
+from  app.object_detection.models.research.object_detectiontpu_exporters import utils
 
 ANCHORS = 'anchors'
 BOX_CLASSIFIER_FEATURES = 'box_classifier_features'

@@ -73,7 +73,7 @@ should appear as follows:
 - annotations.tar.gz
 + images/
 + annotations/
-+ object_detection/
++ app.object_detection.models.research.object_detection/
 ... other files and directories
 ```
 
@@ -84,7 +84,7 @@ Oxford-IIIT Pet dataset into TFRecords. Run the following commands from the
 
 ``` bash
 # From tensorflow/models/research/
-python object_detection/dataset_tools/create_pet_tf_record.py \
+python app.object_detection.models.research.object_detection/dataset_tools/create_pet_tf_record.py \
     --label_map_path=object_detection/data/pet_label_map.pbtxt \
     --data_dir=`pwd` \
     --output_dir=`pwd`
@@ -105,7 +105,7 @@ copy the files into your GCS bucket (substituting `${YOUR_GCS_BUCKET}`):
 # From tensorflow/models/research/
 gsutil cp pet_faces_train.record-* gs://${YOUR_GCS_BUCKET}/data/
 gsutil cp pet_faces_val.record-* gs://${YOUR_GCS_BUCKET}/data/
-gsutil cp object_detection/data/pet_label_map.pbtxt gs://${YOUR_GCS_BUCKET}/data/pet_label_map.pbtxt
+gsutil cp app.object_detection.models.research.object_detection/data/pet_label_map.pbtxt gs://${YOUR_GCS_BUCKET}/data/pet_label_map.pbtxt
 ```
 
 Please remember the path where you upload the data to, as we will need this
@@ -138,7 +138,7 @@ In the Tensorflow Object Detection API, the model parameters, training
 parameters and eval parameters are all defined by a config file. More details
 can be found [here](configuring_jobs.md). For this tutorial, we will use some
 predefined templates provided with the source code. In the
-`object_detection/samples/configs` folder, there are skeleton object_detection
+`object_detection/samples/configs` folder, there are skeleton app.object_detection.models.research.object_detection
 configuration files. We will use `faster_rcnn_resnet101_pets.config` as a
 starting point for configuring the pipeline. Open the file with your favourite
 text editor.
@@ -155,10 +155,10 @@ upload your edited file onto GCS, making note of the path it was uploaded to
 # Edit the faster_rcnn_resnet101_pets.config template. Please note that there
 # are multiple places where PATH_TO_BE_CONFIGURED needs to be set.
 sed -i "s|PATH_TO_BE_CONFIGURED|"gs://${YOUR_GCS_BUCKET}"/data|g" \
-    object_detection/samples/configs/faster_rcnn_resnet101_pets.config
+    app.object_detection.models.research.object_detection/samples/configs/faster_rcnn_resnet101_pets.config
 
 # Copy edited template to cloud.
-gsutil cp object_detection/samples/configs/faster_rcnn_resnet101_pets.config \
+gsutil cp app.object_detection.models.research.object_detection/samples/configs/faster_rcnn_resnet101_pets.config \
     gs://${YOUR_GCS_BUCKET}/data/faster_rcnn_resnet101_pets.config
 ```
 
@@ -196,7 +196,7 @@ the `tensorflow/models/research/` directory:
 
 ```bash
 # From tensorflow/models/research/
-bash object_detection/dataset_tools/create_pycocotools_package.sh /tmp/pycocotools
+bash app.object_detection.models.research.object_detection/dataset_tools/create_pycocotools_package.sh /tmp/pycocotools
 python setup.py sdist
 (cd slim && python setup.py sdist)
 ```
@@ -219,9 +219,9 @@ gcloud ml-engine jobs submit training `whoami`_object_detection_pets_`date +%m_%
     --runtime-version 1.12 \
     --job-dir=gs://${YOUR_GCS_BUCKET}/model_dir \
     --packages dist/object_detection-0.1.tar.gz,slim/dist/slim-0.1.tar.gz,/tmp/pycocotools/pycocotools-2.0.tar.gz \
-    --module-name object_detection.model_main \
+    --module-name  app.object_detection.models.research.object_detectionmodel_main \
     --region us-central1 \
-    --config object_detection/samples/cloud/cloud.yml \
+    --config app.object_detection.models.research.object_detection/samples/cloud/cloud.yml \
     -- \
     --model_dir=gs://${YOUR_GCS_BUCKET}/model_dir \
     --pipeline_config_path=gs://${YOUR_GCS_BUCKET}/data/faster_rcnn_resnet101_pets.config
@@ -284,9 +284,9 @@ command from `tensorflow/models/research/`:
 ```bash
 # From tensorflow/models/research/
 gsutil cp gs://${YOUR_GCS_BUCKET}/model_dir/model.ckpt-${CHECKPOINT_NUMBER}.* .
-python object_detection/export_inference_graph.py \
+python app.object_detection.models.research.object_detection/export_inference_graph.py \
     --input_type image_tensor \
-    --pipeline_config_path object_detection/samples/configs/faster_rcnn_resnet101_pets.config \
+    --pipeline_config_path app.object_detection.models.research.object_detection/samples/configs/faster_rcnn_resnet101_pets.config \
     --trained_checkpoint_prefix model.ckpt-${CHECKPOINT_NUMBER} \
     --output_directory exported_graphs
 ```

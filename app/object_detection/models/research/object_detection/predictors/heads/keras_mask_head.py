@@ -22,9 +22,9 @@ All the mask prediction heads have a predict function that receives the
 import math
 import tensorflow as tf
 
-from object_detection.predictors.heads import head
-from object_detection.utils import ops
-from object_detection.utils import shape_utils
+from  app.object_detection.models.research.object_detectionpredictors.heads import head
+from  app.object_detection.models.research.object_detectionutils import ops
+from  app.object_detection.models.research.object_detectionutils import shape_utils
 
 
 class ConvolutionalMaskHead(head.KerasHead):

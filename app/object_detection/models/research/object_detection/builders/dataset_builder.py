@@ -24,8 +24,8 @@ that wraps the build function.
 import functools
 import tensorflow as tf
 
-from object_detection.data_decoders import tf_example_decoder
-from object_detection.protos import input_reader_pb2
+from  app.object_detection.models.research.object_detectiondata_decoders import tf_example_decoder
+from  app.object_detection.models.research.object_detectionprotos import input_reader_pb2
 
 
 def make_initializable_iterator(dataset):

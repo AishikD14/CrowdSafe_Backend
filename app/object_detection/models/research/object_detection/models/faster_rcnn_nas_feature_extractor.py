@@ -24,8 +24,8 @@ import tensorflow as tf
 from tensorflow.contrib import framework as contrib_framework
 from tensorflow.contrib import slim as contrib_slim
 
-from object_detection.meta_architectures import faster_rcnn_meta_arch
-from object_detection.utils import variables_helper
+from  app.object_detection.models.research.object_detectionmeta_architectures import faster_rcnn_meta_arch
+from  app.object_detection.models.research.object_detectionutils import variables_helper
 from nets.nasnet import nasnet
 from nets.nasnet import nasnet_utils
 
