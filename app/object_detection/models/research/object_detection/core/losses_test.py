@@ -13,7 +13,7 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for google3.research.vale. app.object_detection.models.research.object_detectionlosses."""
+"""Tests for google3.research.vale.object_detection.losses."""
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -24,9 +24,9 @@ import numpy as np
 from six.moves import zip
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import box_list
-from  app.object_detection.models.research.object_detectioncore import losses
-from  app.object_detection.models.research.object_detectioncore import matcher
+from object_detection.core import box_list
+from object_detection.core import losses
+from object_detection.core import matcher
 
 
 class WeightedL2LocalizationLossTest(tf.test.TestCase):

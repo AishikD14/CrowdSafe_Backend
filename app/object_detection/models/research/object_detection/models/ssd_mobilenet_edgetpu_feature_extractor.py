@@ -16,7 +16,7 @@
 
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectionmodels import ssd_mobilenet_v3_feature_extractor
+from object_detection.models import ssd_mobilenet_v3_feature_extractor
 from nets.mobilenet import mobilenet_v3
 
 slim = tf.contrib.slim

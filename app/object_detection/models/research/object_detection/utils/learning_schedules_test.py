@@ -13,7 +13,7 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for  app.object_detection.models.research.object_detectionutils.learning_schedules."""
+"""Tests for object_detection.utils.learning_schedules."""
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -22,8 +22,8 @@ import numpy as np
 from six.moves import range
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectionutils import learning_schedules
-from  app.object_detection.models.research.object_detectionutils import test_case
+from object_detection.utils import learning_schedules
+from object_detection.utils import test_case
 
 
 class LearningSchedulesTest(test_case.TestCase):

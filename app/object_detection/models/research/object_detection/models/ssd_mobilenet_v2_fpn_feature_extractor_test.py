@@ -23,9 +23,9 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.contrib import slim as contrib_slim
 
-from  app.object_detection.models.research.object_detectionmodels import ssd_feature_extractor_test
-from  app.object_detection.models.research.object_detectionmodels import ssd_mobilenet_v2_fpn_feature_extractor
-from  app.object_detection.models.research.object_detectionmodels import ssd_mobilenet_v2_fpn_keras_feature_extractor
+from object_detection.models import ssd_feature_extractor_test
+from object_detection.models import ssd_mobilenet_v2_fpn_feature_extractor
+from object_detection.models import ssd_mobilenet_v2_fpn_keras_feature_extractor
 
 slim = contrib_slim
 

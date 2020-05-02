@@ -26,10 +26,10 @@ from six.moves import range
 from six.moves import zip
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import standard_fields as fields
-from  app.object_detection.models.research.object_detectionutils import shape_utils
-from  app.object_detection.models.research.object_detectionutils import spatial_transform_ops as spatial_ops
-from  app.object_detection.models.research.object_detectionutils import static_shape
+from object_detection.core import standard_fields as fields
+from object_detection.utils import shape_utils
+from object_detection.utils import spatial_transform_ops as spatial_ops
+from object_detection.utils import static_shape
 
 
 matmul_crop_and_resize = spatial_ops.matmul_crop_and_resize

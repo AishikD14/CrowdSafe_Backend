@@ -13,7 +13,7 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for  app.object_detection.models.research.object_detectioncore.batcher."""
+"""Tests for object_detection.core.batcher."""
 
 from __future__ import absolute_import
 from __future__ import division
@@ -23,7 +23,7 @@ import numpy as np
 from six.moves import range
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import batcher
+from object_detection.core import batcher
 
 slim = tf.contrib.slim
 

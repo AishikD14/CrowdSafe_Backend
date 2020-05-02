@@ -2,7 +2,7 @@ pip install tensorflow
 git clone --depth 1 https://github.com/tensorflow/models
 %%bash
 cd models/research/
-protoc app.object_detection.models.research.object_detection/protos/*.proto --python_out=.
+protoc object_detection/protos/*.proto --python_out=.
 %%bash 
 cd models/research
 pip install .

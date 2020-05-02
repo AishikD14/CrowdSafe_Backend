@@ -17,8 +17,8 @@
 import tensorflow as tf
 
 from tensorflow.contrib import slim as contrib_slim
-from  app.object_detection.models.research.object_detectionmodels import ssd_mobilenet_edgetpu_feature_extractor
-from  app.object_detection.models.research.object_detectionmodels import ssd_mobilenet_edgetpu_feature_extractor_testbase
+from object_detection.models import ssd_mobilenet_edgetpu_feature_extractor
+from object_detection.models import ssd_mobilenet_edgetpu_feature_extractor_testbase
 
 slim = contrib_slim
 

@@ -20,12 +20,12 @@ import tensorflow as tf
 
 from google.protobuf import text_format
 
-from  app.object_detection.models.research.object_detectionbuilders import hyperparams_builder
-from  app.object_detection.models.research.object_detectionmodels.keras_models import mobilenet_v2
-from  app.object_detection.models.research.object_detectionmodels.keras_models import model_utils
-from  app.object_detection.models.research.object_detectionmodels.keras_models import test_utils
-from  app.object_detection.models.research.object_detectionprotos import hyperparams_pb2
-from  app.object_detection.models.research.object_detectionutils import test_case
+from object_detection.builders import hyperparams_builder
+from object_detection.models.keras_models import mobilenet_v2
+from object_detection.models.keras_models import model_utils
+from object_detection.models.keras_models import test_utils
+from object_detection.protos import hyperparams_pb2
+from object_detection.utils import test_case
 
 _layers_to_check = [
     'Conv1_relu',

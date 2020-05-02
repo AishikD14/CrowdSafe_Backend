@@ -20,12 +20,12 @@ import math
 import tensorflow as tf
 
 from google.protobuf import text_format
-from  app.object_detection.models.research.object_detectionanchor_generators import flexible_grid_anchor_generator
-from  app.object_detection.models.research.object_detectionanchor_generators import grid_anchor_generator
-from  app.object_detection.models.research.object_detectionanchor_generators import multiple_grid_anchor_generator
-from  app.object_detection.models.research.object_detectionanchor_generators import multiscale_grid_anchor_generator
-from  app.object_detection.models.research.object_detectionbuilders import anchor_generator_builder
-from  app.object_detection.models.research.object_detectionprotos import anchor_generator_pb2
+from object_detection.anchor_generators import flexible_grid_anchor_generator
+from object_detection.anchor_generators import grid_anchor_generator
+from object_detection.anchor_generators import multiple_grid_anchor_generator
+from object_detection.anchor_generators import multiscale_grid_anchor_generator
+from object_detection.builders import anchor_generator_builder
+from object_detection.protos import anchor_generator_pb2
 
 
 class AnchorGeneratorBuilderTest(tf.test.TestCase):

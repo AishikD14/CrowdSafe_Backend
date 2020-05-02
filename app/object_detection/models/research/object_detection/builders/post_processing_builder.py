@@ -17,9 +17,9 @@
 import functools
 
 import tensorflow as tf
-from  app.object_detection.models.research.object_detectionbuilders import calibration_builder
-from  app.object_detection.models.research.object_detectioncore import post_processing
-from  app.object_detection.models.research.object_detectionprotos import post_processing_pb2
+from object_detection.builders import calibration_builder
+from object_detection.core import post_processing
+from object_detection.protos import post_processing_pb2
 
 
 def build(post_processing_config):

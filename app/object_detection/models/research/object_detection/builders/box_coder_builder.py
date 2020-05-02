@@ -14,11 +14,11 @@
 # ==============================================================================
 
 """A function to build an object detection box coder from configuration."""
-from  app.object_detection.models.research.object_detectionbox_coders import faster_rcnn_box_coder
-from  app.object_detection.models.research.object_detectionbox_coders import keypoint_box_coder
-from  app.object_detection.models.research.object_detectionbox_coders import mean_stddev_box_coder
-from  app.object_detection.models.research.object_detectionbox_coders import square_box_coder
-from  app.object_detection.models.research.object_detectionprotos import box_coder_pb2
+from object_detection.box_coders import faster_rcnn_box_coder
+from object_detection.box_coders import keypoint_box_coder
+from object_detection.box_coders import mean_stddev_box_coder
+from object_detection.box_coders import square_box_coder
+from object_detection.protos import box_coder_pb2
 
 
 def build(box_coder_config):

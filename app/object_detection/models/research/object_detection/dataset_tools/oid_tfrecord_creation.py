@@ -20,8 +20,8 @@ from __future__ import print_function
 
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import standard_fields
-from  app.object_detection.models.research.object_detectionutils import dataset_util
+from object_detection.core import standard_fields
+from object_detection.utils import dataset_util
 
 
 def tf_example_from_annotations_data_frame(annotations_data_frame, label_map,

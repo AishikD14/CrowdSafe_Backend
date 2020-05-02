@@ -13,13 +13,13 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for  app.object_detection.models.research.object_detectioncore.balanced_positive_negative_sampler."""
+"""Tests for object_detection.core.balanced_positive_negative_sampler."""
 
 import numpy as np
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import balanced_positive_negative_sampler
-from  app.object_detection.models.research.object_detectionutils import test_case
+from object_detection.core import balanced_positive_negative_sampler
+from object_detection.utils import test_case
 
 
 class BalancedPositiveNegativeSamplerTest(test_case.TestCase):

@@ -17,7 +17,7 @@
 import pandas as pd
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectiondataset_tools import oid_tfrecord_creation
+from object_detection.dataset_tools import oid_tfrecord_creation
 
 
 def create_test_data():

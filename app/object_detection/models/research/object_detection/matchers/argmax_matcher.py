@@ -28,8 +28,8 @@ factory function for popular implementations.
 """
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import matcher
-from  app.object_detection.models.research.object_detectionutils import shape_utils
+from object_detection.core import matcher
+from object_detection.utils import shape_utils
 
 
 class ArgMaxMatcher(matcher.Matcher):

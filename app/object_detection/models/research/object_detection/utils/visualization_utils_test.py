@@ -13,7 +13,7 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for  app.object_detection.models.research.object_detectionutils.visualization_utils."""
+"""Tests for object_detection.utils.visualization_utils."""
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -27,8 +27,8 @@ import six
 from six.moves import range
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import standard_fields as fields
-from  app.object_detection.models.research.object_detectionutils import visualization_utils
+from object_detection.core import standard_fields as fields
+from object_detection.utils import visualization_utils
 
 _TESTDATA_PATH = 'object_detection/test_images'
 

@@ -13,7 +13,7 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for  app.object_detection.models.research.object_detectioncore.prefetcher."""
+"""Tests for object_detection.core.prefetcher."""
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -21,7 +21,7 @@ from __future__ import print_function
 from six.moves import range
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import prefetcher
+from object_detection.core import prefetcher
 
 slim = tf.contrib.slim
 

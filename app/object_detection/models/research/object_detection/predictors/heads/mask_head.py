@@ -23,8 +23,8 @@ import math
 import tensorflow as tf
 from tensorflow.contrib import slim as contrib_slim
 
-from  app.object_detection.models.research.object_detectionpredictors.heads import head
-from  app.object_detection.models.research.object_detectionutils import ops
+from object_detection.predictors.heads import head
+from object_detection.utils import ops
 
 slim = contrib_slim
 

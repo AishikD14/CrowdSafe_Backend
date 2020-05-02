@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-"""Tests for  app.object_detection.models.research.object_detectionutils.config_util."""
+"""Tests for object_detection.utils.config_util."""
 
 from __future__ import absolute_import
 from __future__ import division
@@ -25,13 +25,13 @@ import tensorflow as tf
 
 from google.protobuf import text_format
 
-from  app.object_detection.models.research.object_detectionprotos import eval_pb2
-from  app.object_detection.models.research.object_detectionprotos import image_resizer_pb2
-from  app.object_detection.models.research.object_detectionprotos import input_reader_pb2
-from  app.object_detection.models.research.object_detectionprotos import model_pb2
-from  app.object_detection.models.research.object_detectionprotos import pipeline_pb2
-from  app.object_detection.models.research.object_detectionprotos import train_pb2
-from  app.object_detection.models.research.object_detectionutils import config_util
+from object_detection.protos import eval_pb2
+from object_detection.protos import image_resizer_pb2
+from object_detection.protos import input_reader_pb2
+from object_detection.protos import model_pb2
+from object_detection.protos import pipeline_pb2
+from object_detection.protos import train_pb2
+from object_detection.utils import config_util
 
 
 def _write_config(config, config_path):

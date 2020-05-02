@@ -18,7 +18,7 @@
 import numpy as np
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectionmodels import faster_rcnn_inception_v2_feature_extractor as faster_rcnn_inception_v2
+from object_detection.models import faster_rcnn_inception_v2_feature_extractor as faster_rcnn_inception_v2
 
 
 class FasterRcnnInceptionV2FeatureExtractorTest(tf.test.TestCase):

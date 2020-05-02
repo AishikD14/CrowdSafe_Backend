@@ -98,19 +98,19 @@ import tensorflow as tf
 from tensorflow.contrib import framework as contrib_framework
 from tensorflow.contrib import slim as contrib_slim
 
-from  app.object_detection.models.research.object_detectionanchor_generators import grid_anchor_generator
-from  app.object_detection.models.research.object_detectionbuilders import box_predictor_builder
-from  app.object_detection.models.research.object_detectionbuilders import hyperparams_builder
-from  app.object_detection.models.research.object_detectioncore import box_list
-from  app.object_detection.models.research.object_detectioncore import box_list_ops
-from  app.object_detection.models.research.object_detectioncore import box_predictor
-from  app.object_detection.models.research.object_detectioncore import losses
-from  app.object_detection.models.research.object_detectioncore import model
-from  app.object_detection.models.research.object_detectioncore import standard_fields as fields
-from  app.object_detection.models.research.object_detectioncore import target_assigner
-from  app.object_detection.models.research.object_detectionutils import ops
-from  app.object_detection.models.research.object_detectionutils import shape_utils
-from  app.object_detection.models.research.object_detectionutils import variables_helper
+from object_detection.anchor_generators import grid_anchor_generator
+from object_detection.builders import box_predictor_builder
+from object_detection.builders import hyperparams_builder
+from object_detection.core import box_list
+from object_detection.core import box_list_ops
+from object_detection.core import box_predictor
+from object_detection.core import losses
+from object_detection.core import model
+from object_detection.core import standard_fields as fields
+from object_detection.core import target_assigner
+from object_detection.utils import ops
+from object_detection.utils import shape_utils
+from object_detection.utils import variables_helper
 
 slim = contrib_slim
 

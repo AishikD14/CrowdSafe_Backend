@@ -13,16 +13,16 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests  app.object_detection.models.research.object_detectioncore.hyperparams_builder."""
+"""Tests object_detection.core.hyperparams_builder."""
 
 import numpy as np
 import tensorflow as tf
 
 from google.protobuf import text_format
 
-from  app.object_detection.models.research.object_detectionbuilders import hyperparams_builder
-from  app.object_detection.models.research.object_detectioncore import freezable_batch_norm
-from  app.object_detection.models.research.object_detectionprotos import hyperparams_pb2
+from object_detection.builders import hyperparams_builder
+from object_detection.core import freezable_batch_norm
+from object_detection.protos import hyperparams_pb2
 
 slim = tf.contrib.slim
 

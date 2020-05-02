@@ -13,21 +13,21 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for  app.object_detection.models.research.object_detectionmodels.model_builder."""
+"""Tests for object_detection.models.model_builder."""
 
 from absl.testing import parameterized
 
 import tensorflow as tf
 
 from google.protobuf import text_format
-from  app.object_detection.models.research.object_detectionbuilders import model_builder
-from  app.object_detection.models.research.object_detectionmeta_architectures import faster_rcnn_meta_arch
-from  app.object_detection.models.research.object_detectionmeta_architectures import rfcn_meta_arch
-from  app.object_detection.models.research.object_detectionmeta_architectures import ssd_meta_arch
-from  app.object_detection.models.research.object_detectionmodels import ssd_resnet_v1_fpn_feature_extractor as ssd_resnet_v1_fpn
-from  app.object_detection.models.research.object_detectionprotos import hyperparams_pb2
-from  app.object_detection.models.research.object_detectionprotos import losses_pb2
-from  app.object_detection.models.research.object_detectionprotos import model_pb2
+from object_detection.builders import model_builder
+from object_detection.meta_architectures import faster_rcnn_meta_arch
+from object_detection.meta_architectures import rfcn_meta_arch
+from object_detection.meta_architectures import ssd_meta_arch
+from object_detection.models import ssd_resnet_v1_fpn_feature_extractor as ssd_resnet_v1_fpn
+from object_detection.protos import hyperparams_pb2
+from object_detection.protos import losses_pb2
+from object_detection.protos import model_pb2
 
 
 class ModelBuilderTest(tf.test.TestCase, parameterized.TestCase):

@@ -13,11 +13,11 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for  app.object_detection.models.research.object_detectioncore.bipartite_matcher."""
+"""Tests for object_detection.core.bipartite_matcher."""
 
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectionmatchers import bipartite_matcher
+from object_detection.matchers import bipartite_matcher
 
 
 class GreedyBipartiteMatcherTest(tf.test.TestCase):

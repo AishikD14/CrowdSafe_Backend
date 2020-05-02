@@ -13,11 +13,11 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for  app.object_detection.models.research.object_detectioncore.matcher."""
+"""Tests for object_detection.core.matcher."""
 import numpy as np
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import matcher
+from object_detection.core import matcher
 
 
 class MatchTest(tf.test.TestCase):

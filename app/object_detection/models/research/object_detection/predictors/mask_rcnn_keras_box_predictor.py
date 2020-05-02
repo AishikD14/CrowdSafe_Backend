@@ -14,7 +14,7 @@
 # ==============================================================================
 
 """Mask R-CNN Box Predictor."""
-from  app.object_detection.models.research.object_detectioncore import box_predictor
+from object_detection.core import box_predictor
 
 
 BOX_ENCODINGS = box_predictor.BOX_ENCODINGS

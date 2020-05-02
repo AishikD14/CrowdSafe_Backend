@@ -30,9 +30,9 @@ from __future__ import print_function
 from six.moves import range
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import box_list
-from  app.object_detection.models.research.object_detectionutils import ops
-from  app.object_detection.models.research.object_detectionutils import shape_utils
+from object_detection.core import box_list
+from object_detection.utils import ops
+from object_detection.utils import shape_utils
 
 
 class SortOrder(object):

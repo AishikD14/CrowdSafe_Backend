@@ -19,8 +19,8 @@ from __future__ import division
 from __future__ import print_function
 
 import numpy as np
-from  app.object_detection.models.research.object_detectioncore import standard_fields
-from  app.object_detection.models.research.object_detectionutils import vrd_evaluation
+from object_detection.core import standard_fields
+from object_detection.utils import vrd_evaluation
 
 
 def build_groundtruth_vrd_dictionary(data, class_label_map,

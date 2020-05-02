@@ -18,8 +18,8 @@
 import numpy as np
 from scipy import interpolate
 import tensorflow as tf
-from  app.object_detection.models.research.object_detectionbuilders import calibration_builder
-from  app.object_detection.models.research.object_detectionprotos import calibration_pb2
+from object_detection.builders import calibration_builder
+from object_detection.protos import calibration_pb2
 
 
 class CalibrationBuilderTest(tf.test.TestCase):

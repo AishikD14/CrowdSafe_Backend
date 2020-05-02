@@ -23,16 +23,16 @@ import time
 
 import tensorflow as tf
 
-from app.object_detection.models.research.object_detection import eval_util
-from app.object_detection.models.research.object_detection import inputs
-from app.object_detection.models.research.object_detection import model_lib
-from  app.object_detection.models.research.object_detectionbuilders import model_builder
-from  app.object_detection.models.research.object_detectionbuilders import optimizer_builder
-from  app.object_detection.models.research.object_detectioncore import standard_fields as fields
-from  app.object_detection.models.research.object_detectionutils import config_util
-from  app.object_detection.models.research.object_detectionutils import label_map_util
-from  app.object_detection.models.research.object_detectionutils import ops
-from  app.object_detection.models.research.object_detectionutils import variables_helper
+from object_detection import eval_util
+from object_detection import inputs
+from object_detection import model_lib
+from object_detection.builders import model_builder
+from object_detection.builders import optimizer_builder
+from object_detection.core import standard_fields as fields
+from object_detection.utils import config_util
+from object_detection.utils import label_map_util
+from object_detection.utils import ops
+from object_detection.utils import variables_helper
 
 MODEL_BUILD_UTIL_MAP = model_lib.MODEL_BUILD_UTIL_MAP
 

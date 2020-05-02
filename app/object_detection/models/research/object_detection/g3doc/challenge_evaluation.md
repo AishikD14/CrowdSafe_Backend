@@ -34,13 +34,13 @@ HIERARCHY_FILE=/path/to/challenge-2019-label500-hierarchy.json
 BOUNDING_BOXES=/path/to/challenge-2019-validation-detection-bbox
 IMAGE_LABELS=/path/to/challenge-2019-validation-detection-human-imagelabels
 
-python app.object_detection.models.research.object_detection/dataset_tools/oid_hierarchical_labels_expansion.py \
+python object_detection/dataset_tools/oid_hierarchical_labels_expansion.py \
     --json_hierarchy_file=${HIERARCHY_FILE} \
     --input_annotations=${BOUNDING_BOXES}.csv \
     --output_annotations=${BOUNDING_BOXES}_expanded.csv \
     --annotation_type=1
 
-python app.object_detection.models.research.object_detection/dataset_tools/oid_hierarchical_labels_expansion.py \
+python object_detection/dataset_tools/oid_hierarchical_labels_expansion.py \
     --json_hierarchy_file=${HIERARCHY_FILE} \
     --input_annotations=${IMAGE_LABELS}.csv \
     --output_annotations=${IMAGE_LABELS}_expanded.csv \
@@ -111,19 +111,19 @@ HIERARCHY_FILE=/path/to/challenge-2019-label300-hierarchy.json
 BOUNDING_BOXES=/path/to/challenge-2019-validation-detection-bbox
 IMAGE_LABELS=/path/to/challenge-2019-validation-detection-human-imagelabels
 
-python app.object_detection.models.research.object_detection/dataset_tools/oid_hierarchical_labels_expansion.py \
+python object_detection/dataset_tools/oid_hierarchical_labels_expansion.py \
     --json_hierarchy_file=${HIERARCHY_FILE} \
     --input_annotations=${BOUNDING_BOXES}.csv \
     --output_annotations=${BOUNDING_BOXES}_expanded.csv \
     --annotation_type=1
 
-python app.object_detection.models.research.object_detection/dataset_tools/oid_hierarchical_labels_expansion.py \
+python object_detection/dataset_tools/oid_hierarchical_labels_expansion.py \
     --json_hierarchy_file=${HIERARCHY_FILE} \
     --input_annotations=${IMAGE_LABELS}.csv \
     --output_annotations=${IMAGE_LABELS}_expanded.csv \
     --annotation_type=2
 
-python app.object_detection.models.research.object_detection/dataset_tools/oid_hierarchical_labels_expansion.py \
+python object_detection/dataset_tools/oid_hierarchical_labels_expansion.py \
     --json_hierarchy_file=${HIERARCHY_FILE} \
     --input_annotations=${INSTANCE_SEGMENTATIONS}.csv \
     --output_annotations=${INSTANCE_SEGMENTATIONS}_expanded.csv \
@@ -196,7 +196,7 @@ item { name: 'under' id: 9 display_name: 'under' }
 item { name: 'hits' id: 10 display_name: 'hits' }
 "> ${INPUT_RELATIONSHIP_LABELMAP}
 
-python app.object_detection.models.research.object_detection/metrics/oid_vrd_challenge_evaluation.py \
+python object_detection/metrics/oid_vrd_challenge_evaluation.py \
     --input_annotations_boxes=${INPUT_ANNOTATIONS_BOXES} \
     --input_annotations_labels=${INPUT_ANNOTATIONS_LABELS} \
     --input_predictions=${INPUT_PREDICTIONS} \

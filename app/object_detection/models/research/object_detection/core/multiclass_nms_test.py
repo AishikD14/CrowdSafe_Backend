@@ -13,12 +13,12 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for tensorflow_models. app.object_detection.models.research.object_detectioncore.post_processing."""
+"""Tests for tensorflow_models.object_detection.core.post_processing."""
 import numpy as np
 import tensorflow as tf
-from  app.object_detection.models.research.object_detectioncore import post_processing
-from  app.object_detection.models.research.object_detectioncore import standard_fields as fields
-from  app.object_detection.models.research.object_detectionutils import test_case
+from object_detection.core import post_processing
+from object_detection.core import standard_fields as fields
+from object_detection.utils import test_case
 
 
 class MulticlassNonMaxSuppressionTest(test_case.TestCase):

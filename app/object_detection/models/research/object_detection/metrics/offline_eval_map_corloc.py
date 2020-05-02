@@ -18,12 +18,12 @@ This executable evaluates precomputed detections produced by a detection
 model and writes the evaluation results into csv file metrics.csv, stored
 in the directory, specified by --eval_dir.
 
-The evaluation metrics set is supplied in  app.object_detection.models.research.object_detectionprotos.EvalConfig
+The evaluation metrics set is supplied in object_detection.protos.EvalConfig
 in metrics_set field.
 Currently two set of metrics are supported:
 - pascal_voc_metrics: standard PASCAL VOC 2007 metric
 - open_images_detection_metrics: Open Image V2 metric
-All other field of  app.object_detection.models.research.object_detectionprotos.EvalConfig are ignored.
+All other field of object_detection.protos.EvalConfig are ignored.
 
 Example usage:
     ./compute_metrics \
@@ -36,11 +36,11 @@ import os
 import re
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import standard_fields
-from  app.object_detection.models.research.object_detectionlegacy import evaluator
-from  app.object_detection.models.research.object_detectionmetrics import tf_example_parser
-from  app.object_detection.models.research.object_detectionutils import config_util
-from  app.object_detection.models.research.object_detectionutils import label_map_util
+from object_detection.core import standard_fields
+from object_detection.legacy import evaluator
+from object_detection.metrics import tf_example_parser
+from object_detection.utils import config_util
+from object_detection.utils import label_map_util
 
 flags = tf.app.flags
 tf.logging.set_verbosity(tf.logging.INFO)
@@ -78,9 +78,9 @@ def read_data_and_evaluate(input_config, eval_config):
 
   Args:
     input_config: input config proto of type
-       app.object_detection.models.research.object_detectionprotos.InputReader.
+      object_detection.protos.InputReader.
     eval_config: evaluation config proto of type
-       app.object_detection.models.research.object_detectionprotos.EvalConfig.
+      object_detection.protos.EvalConfig.
 
   Returns:
     Evaluated detections metrics.

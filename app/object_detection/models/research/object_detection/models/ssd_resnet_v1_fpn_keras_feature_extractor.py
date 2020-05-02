@@ -17,11 +17,11 @@
 
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectionmeta_architectures import ssd_meta_arch
-from  app.object_detection.models.research.object_detectionmodels import feature_map_generators
-from  app.object_detection.models.research.object_detectionmodels.keras_models import resnet_v1
-from  app.object_detection.models.research.object_detectionutils import ops
-from  app.object_detection.models.research.object_detectionutils import shape_utils
+from object_detection.meta_architectures import ssd_meta_arch
+from object_detection.models import feature_map_generators
+from object_detection.models.keras_models import resnet_v1
+from object_detection.utils import ops
+from object_detection.utils import shape_utils
 
 _RESNET_MODEL_OUTPUT_LAYERS = {
     'resnet_v1_50': ['conv2_block3_out', 'conv3_block4_out',

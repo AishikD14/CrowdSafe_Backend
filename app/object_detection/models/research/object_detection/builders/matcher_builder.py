@@ -15,9 +15,9 @@
 
 """A function to build an object detection matcher from configuration."""
 
-from  app.object_detection.models.research.object_detectionmatchers import argmax_matcher
-from  app.object_detection.models.research.object_detectionmatchers import bipartite_matcher
-from  app.object_detection.models.research.object_detectionprotos import matcher_pb2
+from object_detection.matchers import argmax_matcher
+from object_detection.matchers import bipartite_matcher
+from object_detection.protos import matcher_pb2
 
 
 def build(matcher_config):

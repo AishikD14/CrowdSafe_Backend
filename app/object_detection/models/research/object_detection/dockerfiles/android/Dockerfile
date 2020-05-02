@@ -57,7 +57,7 @@ RUN curl -OL "https://github.com/google/protobuf/releases/download/v3.0.0/protoc
 
 # Run protoc on the object detection repo
 RUN cd /tensorflow/models/research && \
-    protoc app.object_detection.models.research.object_detection/protos/*.proto --python_out=.
+    protoc object_detection/protos/*.proto --python_out=.
 
 # Set the PYTHONPATH to finish installing the API
 ENV PYTHONPATH $PYTHONPATH:/tensorflow/models/research:/tensorflow/models/research/slim

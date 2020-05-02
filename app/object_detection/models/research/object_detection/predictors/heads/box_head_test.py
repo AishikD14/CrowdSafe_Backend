@@ -13,14 +13,14 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for  app.object_detection.models.research.object_detectionpredictors.heads.box_head."""
+"""Tests for object_detection.predictors.heads.box_head."""
 import tensorflow as tf
 
 from google.protobuf import text_format
-from  app.object_detection.models.research.object_detectionbuilders import hyperparams_builder
-from  app.object_detection.models.research.object_detectionpredictors.heads import box_head
-from  app.object_detection.models.research.object_detectionprotos import hyperparams_pb2
-from  app.object_detection.models.research.object_detectionutils import test_case
+from object_detection.builders import hyperparams_builder
+from object_detection.predictors.heads import box_head
+from object_detection.protos import hyperparams_pb2
+from object_detection.utils import test_case
 
 
 class MaskRCNNBoxHeadTest(test_case.TestCase):

@@ -13,7 +13,7 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for  app.object_detection.models.research.object_detectioncore.freezable_batch_norm."""
+"""Tests for object_detection.core.freezable_batch_norm."""
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -22,7 +22,7 @@ import numpy as np
 from six.moves import zip
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import freezable_batch_norm
+from object_detection.core import freezable_batch_norm
 
 
 class FreezableBatchNormTest(tf.test.TestCase):

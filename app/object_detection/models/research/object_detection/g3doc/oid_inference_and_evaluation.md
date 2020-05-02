@@ -92,7 +92,7 @@ SPLIT=validation  # Set SPLIT to "test" to create TFRecords for the test split
 mkdir ${SPLIT}_tfrecords
 
 PYTHONPATH=$PYTHONPATH:$(readlink -f ..) \
-python -m app.object_detection.models.research.object_detection/dataset_tools/create_oid_tf_record \
+python -m object_detection/dataset_tools/create_oid_tf_record \
   --input_box_annotations_csv 2017_07/$SPLIT/annotations-human-bbox.csv \
   --input_images_directory raw_images_${SPLIT} \
   --input_label_map ../object_detection/data/oid_bbox_trainable_label_map.pbtxt \
@@ -133,7 +133,7 @@ SPLIT=validation  # or test
 TF_RECORD_FILES=$(ls -1 ${SPLIT}_tfrecords/* | tr '\n' ',')
 
 PYTHONPATH=$PYTHONPATH:$(readlink -f ..) \
-python -m app.object_detection.models.research.object_detection/inference/infer_detections \
+python -m object_detection/inference/infer_detections \
   --input_tfrecord_paths=$TF_RECORD_FILES \
   --output_tfrecord_path=${SPLIT}_detections.tfrecord-00000-of-00001 \
   --inference_graph=faster_rcnn_inception_resnet_v2_atrous_oid/frozen_inference_graph.pb \
@@ -186,7 +186,7 @@ for gpu_index in $(seq 0 $(($NUM_GPUS-1))); do
   TF_RECORD_FILES=$(seq -s, -f "${SPLIT}_tfrecords/${SPLIT}.tfrecord-%05.0f-of-$(printf '%05d' $NUM_SHARDS)" $start_shard $end_shard)
   tmux_start ${gpu_index} \
   PYTHONPATH=$PYTHONPATH:$(readlink -f ..) CUDA_VISIBLE_DEVICES=$gpu_index \
-  python -m app.object_detection.models.research.object_detection/inference/infer_detections \
+  python -m object_detection/inference/infer_detections \
     --input_tfrecord_paths=$TF_RECORD_FILES \
     --output_tfrecord_path=${SPLIT}_detections.tfrecord-$(printf "%05d" $gpu_index)-of-$(printf "%05d" $NUM_GPUS) \
     --inference_graph=faster_rcnn_inception_resnet_v2_atrous_oid/frozen_inference_graph.pb \
@@ -227,15 +227,15 @@ And then run:
 SPLIT=validation  # or test
 
 PYTHONPATH=$PYTHONPATH:$(readlink -f ..) \
-python -m app.object_detection.models.research.object_detection/metrics/offline_eval_map_corloc \
+python -m object_detection/metrics/offline_eval_map_corloc \
   --eval_dir=${SPLIT}_eval_metrics \
   --eval_config_path=${SPLIT}_eval_metrics/${SPLIT}_eval_config.pbtxt \
   --input_config_path=${SPLIT}_eval_metrics/${SPLIT}_input_config.pbtxt
 ```
 
-The first configuration file contains an ` app.object_detection.models.research.object_detectionprotos.InputReader`
+The first configuration file contains an `object_detection.protos.InputReader`
 message that describes the location of the necessary input files. The second
-file contains an ` app.object_detection.models.research.object_detectionprotos.EvalConfig` message that describes the
+file contains an `object_detection.protos.EvalConfig` message that describes the
 evaluation metric. For more information about these protos see the corresponding
 source files.
 

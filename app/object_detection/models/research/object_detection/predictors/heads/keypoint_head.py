@@ -25,7 +25,7 @@ objects.
 import tensorflow as tf
 from tensorflow.contrib import slim as contrib_slim
 
-from  app.object_detection.models.research.object_detectionpredictors.heads import head
+from object_detection.predictors.heads import head
 slim = contrib_slim
 
 

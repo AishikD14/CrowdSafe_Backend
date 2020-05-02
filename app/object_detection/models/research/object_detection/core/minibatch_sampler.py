@@ -38,7 +38,7 @@ from abc import abstractmethod
 import six
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectionutils import ops
+from object_detection.utils import ops
 
 
 class MinibatchSampler(six.with_metaclass(ABCMeta, object)):

@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-package  app.object_detection.models.research.object_detectionprotos;
+package object_detection.protos;
 
 // Configuration proto for SquareBoxCoder. See
 // box_coders/square_box_coder.py for details.

@@ -1,4 +1,4 @@
-"""Setup script for  app.object_detection.models.research.object_detection"""
+"""Setup script for object_detection."""
 
 from setuptools import find_packages
 from setuptools import setup

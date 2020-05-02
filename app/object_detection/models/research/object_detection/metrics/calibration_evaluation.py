@@ -20,14 +20,14 @@ from __future__ import print_function
 
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectionbox_coders import mean_stddev_box_coder
-from  app.object_detection.models.research.object_detectioncore import box_list
-from  app.object_detection.models.research.object_detectioncore import region_similarity_calculator
-from  app.object_detection.models.research.object_detectioncore import standard_fields
-from  app.object_detection.models.research.object_detectioncore import target_assigner
-from  app.object_detection.models.research.object_detectionmatchers import argmax_matcher
-from  app.object_detection.models.research.object_detectionmetrics import calibration_metrics
-from  app.object_detection.models.research.object_detectionutils import object_detection_evaluation
+from object_detection.box_coders import mean_stddev_box_coder
+from object_detection.core import box_list
+from object_detection.core import region_similarity_calculator
+from object_detection.core import standard_fields
+from object_detection.core import target_assigner
+from object_detection.matchers import argmax_matcher
+from object_detection.metrics import calibration_metrics
+from object_detection.utils import object_detection_evaluation
 
 
 # TODO(zbeaver): Implement metrics per category.

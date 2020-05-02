@@ -22,7 +22,7 @@ import numpy as np
 import PIL.Image
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectiondataset_tools import create_coco_tf_record
+from object_detection.dataset_tools import create_coco_tf_record
 
 
 class CreateCocoTFRecordTest(tf.test.TestCase):

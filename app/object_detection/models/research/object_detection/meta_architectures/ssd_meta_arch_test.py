@@ -13,7 +13,7 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for  app.object_detection.models.research.object_detectionmeta_architectures.ssd_meta_arch."""
+"""Tests for object_detection.meta_architectures.ssd_meta_arch."""
 
 from absl.testing import parameterized
 
@@ -21,10 +21,10 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.contrib import slim as contrib_slim
 
-from  app.object_detection.models.research.object_detectionmeta_architectures import ssd_meta_arch
-from  app.object_detection.models.research.object_detectionmeta_architectures import ssd_meta_arch_test_lib
-from  app.object_detection.models.research.object_detectionprotos import model_pb2
-from  app.object_detection.models.research.object_detectionutils import test_utils
+from object_detection.meta_architectures import ssd_meta_arch
+from object_detection.meta_architectures import ssd_meta_arch_test_lib
+from object_detection.protos import model_pb2
+from object_detection.utils import test_utils
 
 slim = contrib_slim
 keras = tf.keras.layers

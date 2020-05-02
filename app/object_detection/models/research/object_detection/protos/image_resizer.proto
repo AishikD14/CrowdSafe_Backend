@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-package  app.object_detection.models.research.object_detectionprotos;
+package object_detection.protos;
 
 // Configuration proto for image resizing operations.
 // See builders/image_resizer_builder.py for details.

@@ -13,14 +13,14 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for  app.object_detection.models.research.object_detectionpredictors.heads.keypoint_head."""
+"""Tests for object_detection.predictors.heads.keypoint_head."""
 import tensorflow as tf
 
 from google.protobuf import text_format
-from  app.object_detection.models.research.object_detectionbuilders import hyperparams_builder
-from  app.object_detection.models.research.object_detectionpredictors.heads import keypoint_head
-from  app.object_detection.models.research.object_detectionprotos import hyperparams_pb2
-from  app.object_detection.models.research.object_detectionutils import test_case
+from object_detection.builders import hyperparams_builder
+from object_detection.predictors.heads import keypoint_head
+from object_detection.protos import hyperparams_pb2
+from object_detection.utils import test_case
 
 
 class MaskRCNNKeypointHeadTest(test_case.TestCase):

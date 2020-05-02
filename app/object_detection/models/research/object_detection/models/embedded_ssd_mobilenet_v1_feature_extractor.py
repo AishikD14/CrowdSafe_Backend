@@ -18,10 +18,10 @@
 import tensorflow as tf
 from tensorflow.contrib import slim as contrib_slim
 
-from  app.object_detection.models.research.object_detectionmeta_architectures import ssd_meta_arch
-from  app.object_detection.models.research.object_detectionmodels import feature_map_generators
-from  app.object_detection.models.research.object_detectionutils import context_manager
-from  app.object_detection.models.research.object_detectionutils import ops
+from object_detection.meta_architectures import ssd_meta_arch
+from object_detection.models import feature_map_generators
+from object_detection.utils import context_manager
+from object_detection.utils import ops
 from nets import mobilenet_v1
 
 slim = contrib_slim

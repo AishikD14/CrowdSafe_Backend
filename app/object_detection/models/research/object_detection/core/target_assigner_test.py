@@ -13,19 +13,19 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for  app.object_detection.models.research.object_detectioncore.target_assigner."""
+"""Tests for object_detection.core.target_assigner."""
 import numpy as np
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectionbox_coders import keypoint_box_coder
-from  app.object_detection.models.research.object_detectionbox_coders import mean_stddev_box_coder
-from  app.object_detection.models.research.object_detectioncore import box_list
-from  app.object_detection.models.research.object_detectioncore import region_similarity_calculator
-from  app.object_detection.models.research.object_detectioncore import standard_fields as fields
-from  app.object_detection.models.research.object_detectioncore import target_assigner as targetassigner
-from  app.object_detection.models.research.object_detectionmatchers import argmax_matcher
-from  app.object_detection.models.research.object_detectionmatchers import bipartite_matcher
-from  app.object_detection.models.research.object_detectionutils import test_case
+from object_detection.box_coders import keypoint_box_coder
+from object_detection.box_coders import mean_stddev_box_coder
+from object_detection.core import box_list
+from object_detection.core import region_similarity_calculator
+from object_detection.core import standard_fields as fields
+from object_detection.core import target_assigner as targetassigner
+from object_detection.matchers import argmax_matcher
+from object_detection.matchers import bipartite_matcher
+from object_detection.utils import test_case
 
 
 class TargetAssignerTest(test_case.TestCase):

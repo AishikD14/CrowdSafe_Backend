@@ -21,10 +21,10 @@ import numpy as np
 from six.moves import zip
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import standard_fields
-from  app.object_detection.models.research.object_detectionmetrics import coco_tools
-from  app.object_detection.models.research.object_detectionutils import json_utils
-from  app.object_detection.models.research.object_detectionutils import object_detection_evaluation
+from object_detection.core import standard_fields
+from object_detection.metrics import coco_tools
+from object_detection.utils import json_utils
+from object_detection.utils import object_detection_evaluation
 
 
 class CocoDetectionEvaluator(object_detection_evaluation.DetectionEvaluator):

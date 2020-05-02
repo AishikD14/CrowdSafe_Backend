@@ -13,12 +13,12 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for  app.object_detection.models.research.object_detectioncore.box_coder."""
+"""Tests for object_detection.core.box_coder."""
 
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import box_coder
-from  app.object_detection.models.research.object_detectioncore import box_list
+from object_detection.core import box_coder
+from object_detection.core import box_list
 
 
 class MockBoxCoder(box_coder.BoxCoder):

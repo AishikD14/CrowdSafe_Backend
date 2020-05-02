@@ -12,17 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-"""Tests for  app.object_detection.models.research.object_detectiondata_decoders.tf_example_decoder."""
+"""Tests for object_detection.data_decoders.tf_example_decoder."""
 
 import os
 import numpy as np
 import six
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import standard_fields as fields
-from  app.object_detection.models.research.object_detectiondata_decoders import tf_example_decoder
-from  app.object_detection.models.research.object_detectionprotos import input_reader_pb2
-from  app.object_detection.models.research.object_detectionutils import dataset_util
+from object_detection.core import standard_fields as fields
+from object_detection.data_decoders import tf_example_decoder
+from object_detection.protos import input_reader_pb2
+from object_detection.utils import dataset_util
 
 slim_example_decoder = tf.contrib.slim.tfexample_decoder
 

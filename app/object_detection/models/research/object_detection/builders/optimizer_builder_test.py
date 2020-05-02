@@ -19,8 +19,8 @@ import tensorflow as tf
 
 from google.protobuf import text_format
 
-from  app.object_detection.models.research.object_detectionbuilders import optimizer_builder
-from  app.object_detection.models.research.object_detectionprotos import optimizer_pb2
+from object_detection.builders import optimizer_builder
+from object_detection.protos import optimizer_pb2
 
 
 class LearningRateBuilderTest(tf.test.TestCase):

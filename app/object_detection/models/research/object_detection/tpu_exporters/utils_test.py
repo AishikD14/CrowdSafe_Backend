@@ -20,7 +20,7 @@ from __future__ import print_function
 
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectiontpu_exporters import utils
+from object_detection.tpu_exporters import utils
 
 
 class UtilsTest(tf.test.TestCase):

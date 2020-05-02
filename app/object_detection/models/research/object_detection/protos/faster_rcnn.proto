@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-package  app.object_detection.models.research.object_detectionprotos;
+package object_detection.protos;
 
 import "object_detection/protos/anchor_generator.proto";
 import "object_detection/protos/box_predictor.proto";

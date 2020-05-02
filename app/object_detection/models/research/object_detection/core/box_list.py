@@ -36,7 +36,7 @@ Some other notes:
 
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectionutils import shape_utils
+from object_detection.utils import shape_utils
 
 
 class BoxList(object):

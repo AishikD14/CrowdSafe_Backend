@@ -13,7 +13,7 @@
 # limitations under the License.
 # ==============================================================================
 
-r"""Convert raw COCO dataset to TFRecord for  app.object_detection.models.research.object_detection
+r"""Convert raw COCO dataset to TFRecord for object_detection.
 
 Please note that this tool creates sharded output files.
 
@@ -42,9 +42,9 @@ import PIL.Image
 from pycocotools import mask
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectiondataset_tools import tf_record_creation_util
-from  app.object_detection.models.research.object_detectionutils import dataset_util
-from  app.object_detection.models.research.object_detectionutils import label_map_util
+from object_detection.dataset_tools import tf_record_creation_util
+from object_detection.utils import dataset_util
+from object_detection.utils import label_map_util
 
 
 flags = tf.app.flags

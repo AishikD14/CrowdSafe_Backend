@@ -4,7 +4,7 @@
 
 The Tensorflow Object Detection API uses protobuf files to configure the
 training and evaluation process. The schema for the training pipeline can be
-found in app.object_detection.models.research.object_detection/protos/pipeline.proto. At a high level, the config
+found in object_detection/protos/pipeline.proto. At a high level, the config
 file is split into 5 parts:
 
 1. The `model` configuration. This defines what type of model will be trained
@@ -53,7 +53,7 @@ recommended. Read [our paper](https://arxiv.org/abs/1611.10012) for a more
 detailed discussion on the speed vs accuracy tradeoff.
 
 To help new users get started, sample model configurations have been provided
-in the app.object_detection.models.research.object_detection/samples/configs folder. The contents of these
+in the object_detection/samples/configs folder. The contents of these
 configuration files can be pasted into `model` field of the skeleton
 configuration. Users should note that the `num_classes` field should be changed
 to a value suited for the dataset the user is training on.

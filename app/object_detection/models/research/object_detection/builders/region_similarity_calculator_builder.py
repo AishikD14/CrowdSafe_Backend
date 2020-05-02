@@ -15,8 +15,8 @@
 
 """Builder for region similarity calculators."""
 
-from  app.object_detection.models.research.object_detectioncore import region_similarity_calculator
-from  app.object_detection.models.research.object_detectionprotos import region_similarity_calculator_pb2
+from object_detection.core import region_similarity_calculator
+from object_detection.protos import region_similarity_calculator_pb2
 
 
 def build(region_similarity_calculator_config):

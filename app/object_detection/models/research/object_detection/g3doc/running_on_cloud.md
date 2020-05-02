@@ -29,7 +29,7 @@ library). The required packages can be created with the following command
 
 ``` bash
 # From tensorflow/models/research/
-bash app.object_detection.models.research.object_detection/dataset_tools/create_pycocotools_package.sh /tmp/pycocotools
+bash object_detection/dataset_tools/create_pycocotools_package.sh /tmp/pycocotools
 python setup.py sdist
 (cd slim && python setup.py sdist)
 ```
@@ -76,7 +76,7 @@ gcloud ml-engine jobs submit training object_detection_`date +%m_%d_%Y_%H_%M_%S`
     --runtime-version 1.12 \
     --job-dir=gs://${MODEL_DIR} \
     --packages dist/object_detection-0.1.tar.gz,slim/dist/slim-0.1.tar.gz,/tmp/pycocotools/pycocotools-2.0.tar.gz \
-    --module-name  app.object_detection.models.research.object_detectionmodel_main \
+    --module-name object_detection.model_main \
     --region us-central1 \
     --config ${PATH_TO_LOCAL_YAML_FILE} \
     -- \
@@ -104,7 +104,7 @@ similar command:
 gcloud ml-engine jobs submit training `whoami`_object_detection_`date +%m_%d_%Y_%H_%M_%S` \
 --job-dir=gs://${MODEL_DIR} \
 --packages dist/object_detection-0.1.tar.gz,slim/dist/slim-0.1.tar.gz,/tmp/pycocotools/pycocotools-2.0.tar.gz \
---module-name  app.object_detection.models.research.object_detectionmodel_tpu_main \
+--module-name object_detection.model_tpu_main \
 --runtime-version 1.12 \
 --scale-tier BASIC_TPU \
 --region us-central1 \
@@ -115,8 +115,8 @@ gcloud ml-engine jobs submit training `whoami`_object_detection_`date +%m_%d_%Y_
 ```
 
 In contrast with the GPU training command, there is no need to specify a YAML
-file and we point to the * app.object_detection.models.research.object_detectionmodel_tpu_main* binary instead of
-* app.object_detection.models.research.object_detectionmodel_main*. We must also now set `scale-tier` to be
+file and we point to the *object_detection.model_tpu_main* binary instead of
+*object_detection.model_main*. We must also now set `scale-tier` to be
 `BASIC_TPU` and provide a `tpu_zone`. Finally as before `pipeline_config_path`
 points to a points to the pipeline configuration stored on Google Cloud Storage
 (but is now must be a TPU compatible model).
@@ -136,7 +136,7 @@ gcloud ml-engine jobs submit training object_detection_eval_`date +%m_%d_%Y_%H_%
     --runtime-version 1.12 \
     --job-dir=gs://${MODEL_DIR} \
     --packages dist/object_detection-0.1.tar.gz,slim/dist/slim-0.1.tar.gz,/tmp/pycocotools/pycocotools-2.0.tar.gz \
-    --module-name  app.object_detection.models.research.object_detectionmodel_main \
+    --module-name object_detection.model_main \
     --region us-central1 \
     --scale-tier BASIC_GPU \
     -- \

@@ -4,7 +4,7 @@
 
 syntax = "proto2";
 
-package  app.object_detection.models.research.object_detectionprotos;
+package object_detection.protos;
 
 // Message wrapper for various calibration configurations.
 message CalibrationConfig {

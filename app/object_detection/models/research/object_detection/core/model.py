@@ -62,7 +62,7 @@ import abc
 import six
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import standard_fields as fields
+from object_detection.core import standard_fields as fields
 
 
 # If using a new enough version of TensorFlow, detection models should be a

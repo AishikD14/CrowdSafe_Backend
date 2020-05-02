@@ -17,7 +17,7 @@
 
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectionmodels import faster_rcnn_inception_resnet_v2_feature_extractor as frcnn_inc_res
+from object_detection.models import faster_rcnn_inception_resnet_v2_feature_extractor as frcnn_inc_res
 
 
 class FasterRcnnInceptionResnetV2FeatureExtractorTest(tf.test.TestCase):

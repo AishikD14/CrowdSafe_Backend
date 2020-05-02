@@ -21,7 +21,7 @@ from __future__ import print_function
 
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import freezable_batch_norm
+from object_detection.core import freezable_batch_norm
 
 
 class _LayersOverride(object):

@@ -18,9 +18,9 @@ import collections
 
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import box_predictor
-from  app.object_detection.models.research.object_detectionutils import shape_utils
-from  app.object_detection.models.research.object_detectionutils import static_shape
+from object_detection.core import box_predictor
+from object_detection.utils import shape_utils
+from object_detection.utils import static_shape
 
 keras = tf.keras.layers
 

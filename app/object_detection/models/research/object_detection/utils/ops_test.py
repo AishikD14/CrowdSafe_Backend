@@ -13,7 +13,7 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Tests for  app.object_detection.models.research.object_detectionutils.ops."""
+"""Tests for object_detection.utils.ops."""
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -23,9 +23,9 @@ import six
 from six.moves import range
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectioncore import standard_fields as fields
-from  app.object_detection.models.research.object_detectionutils import ops
-from  app.object_detection.models.research.object_detectionutils import test_case
+from object_detection.core import standard_fields as fields
+from object_detection.utils import ops
+from object_detection.utils import test_case
 
 slim = tf.contrib.slim
 

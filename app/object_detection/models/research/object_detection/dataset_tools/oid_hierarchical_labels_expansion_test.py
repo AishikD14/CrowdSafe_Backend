@@ -20,7 +20,7 @@ from __future__ import print_function
 
 import tensorflow as tf
 
-from  app.object_detection.models.research.object_detectiondataset_tools import oid_hierarchical_labels_expansion
+from object_detection.dataset_tools import oid_hierarchical_labels_expansion
 
 
 def create_test_data():

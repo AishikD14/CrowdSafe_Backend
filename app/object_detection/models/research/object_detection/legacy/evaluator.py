@@ -21,11 +21,11 @@ DetectionModel.
 import logging
 import tensorflow as tf
 
-from app.object_detection.models.research.object_detection import eval_util
-from  app.object_detection.models.research.object_detectioncore import prefetcher
-from  app.object_detection.models.research.object_detectioncore import standard_fields as fields
-from  app.object_detection.models.research.object_detectionmetrics import coco_evaluation
-from  app.object_detection.models.research.object_detectionutils import object_detection_evaluation
+from object_detection import eval_util
+from object_detection.core import prefetcher
+from object_detection.core import standard_fields as fields
+from object_detection.metrics import coco_evaluation
+from object_detection.utils import object_detection_evaluation
 
 # A dictionary of metric names to classes that implement the metric. The classes
 # in the dictionary must implement

@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-"""Tests for tensorflow_models. app.object_detection.models.research.object_detectionmetrics.coco_evaluation."""
+"""Tests for tensorflow_models.object_detection.metrics.coco_evaluation."""
 
 from __future__ import absolute_import
 from __future__ import division
@@ -20,8 +20,8 @@ from __future__ import print_function
 
 import numpy as np
 import tensorflow as tf
-from  app.object_detection.models.research.object_detectioncore import standard_fields
-from  app.object_detection.models.research.object_detectionmetrics import coco_evaluation
+from object_detection.core import standard_fields
+from object_detection.metrics import coco_evaluation
 
 
 def _get_categories_list():

@@ -105,8 +105,8 @@ python export_inference_graph.py \
 """
 import tensorflow as tf
 from google.protobuf import text_format
-from app.object_detection.models.research.object_detection import exporter
-from  app.object_detection.models.research.object_detectionprotos import pipeline_pb2
+from object_detection import exporter
+from object_detection.protos import pipeline_pb2
 
 slim = tf.contrib.slim
 flags = tf.app.flags
