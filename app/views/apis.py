@@ -20,10 +20,17 @@ app.config['BASIC_AUTH_PASSWORD'] = 'Covid19'
 #app.config['BASIC_AUTH_FORCE'] = True
 #basic_auth = BasicAuth(app)
 
+from datetime import datetime
+from pytz import timezone
+
+kolkata_zone = timezone('Asia/Kolkata')
+in_time = datetime.now(kolkata_zone)
+start_time = in_time.now().strftime('%Y-%m-%d %H:%M:%S')
+last_update = None
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return "Crowdsafe Backend Server! <br/>Server Started at "+start_time
 
 
 @app.route("/create_table", methods=['POST'])
